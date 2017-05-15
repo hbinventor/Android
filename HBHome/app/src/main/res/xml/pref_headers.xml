@@ -13,9 +13,9 @@
         android:title="@string/pref_header_notifications" />
 
     <header
-        android:fragment="com.hbinvent.hbhomecenter.SettingsActivity$MqttPreferenceFragment"
+        android:fragment="com.hbinvent.hbhomecenter.SettingsActivity$NetworkPreferenceFragment"
         android:icon="@drawable/ic_info_black_24dp"
-        android:title="@string/title_mqtt" />
+        android:title="@string/title_network_settings" />
 
     <header
         android:fragment="com.hbinvent.hbhomecenter.SettingsActivity$DataSyncPreferenceFragment"

@@ -1,0 +1,54 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <PreferenceCategory android:title="@string/title_mqtt">
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="mqtt_enable"
+            android:title="@string/mqtt_enable" />
+        <EditTextPreference
+            android:capitalize="words"
+            android:dependency="mqtt_enable"
+            android:key="mqtt_server"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/mqtt_server" />
+        <EditTextPreference
+            android:defaultValue="1883"
+            android:dependency="mqtt_enable"
+            android:key="mqtt_port"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/mqtt_port" />
+        <EditTextPreference
+            android:dependency="mqtt_enable"
+            android:key="mqtt_username"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/mqtt_username" />
+        <EditTextPreference
+            android:dependency="mqtt_enable"
+            android:inputType="textPassword"
+            android:key="mqtt_password"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/mqtt_password" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/title_http">
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="http_enable"
+            android:title="@string/http_enable" />
+        <EditTextPreference
+            android:id="@+id/http_port"
+            android:defaultValue="Default value"
+            android:dependency="http_enable"
+            android:inputType="numberSigned"
+            android:key="edit_text_preference_1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/http_port" />
+    </PreferenceCategory>
+</PreferenceScreen>

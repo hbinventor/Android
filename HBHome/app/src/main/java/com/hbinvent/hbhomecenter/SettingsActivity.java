@@ -159,7 +159,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
                 || GeneralPreferenceFragment.class.getName().equals(fragmentName)
                 || DataSyncPreferenceFragment.class.getName().equals(fragmentName)
                 || NotificationPreferenceFragment.class.getName().equals(fragmentName)
-                || MqttPreferenceFragment.class.getName().equals(fragmentName);
+                || NetworkPreferenceFragment.class.getName().equals(fragmentName);
     }
 
     /**
@@ -258,11 +258,11 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
      * activity is showing a two-pane settings UI.
      */
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
-    public static class MqttPreferenceFragment extends PreferenceFragment {
+    public static class NetworkPreferenceFragment extends PreferenceFragment {
         @Override
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
-            addPreferencesFromResource(R.xml.pref_mqtt);
+            addPreferencesFromResource(R.xml.pref_network);
             setHasOptionsMenu(true);
 
             // Bind the summaries of EditText/List/Dialog/Ringtone preferences
@@ -272,6 +272,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             bindPreferenceSummaryToValue(findPreference("mqtt_server"));
             bindPreferenceSummaryToValue(findPreference("mqtt_port"));
             bindPreferenceSummaryToValue(findPreference("mqtt_username"));
+            bindPreferenceSummaryToValue(findPreference("http_port"));
         }
 
         @Override
