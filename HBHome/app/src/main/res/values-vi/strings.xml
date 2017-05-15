@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HB Home Center</string>
+    <string name="action_settings">Cài đặt</string>
+    <string name="about">Về chúng tôi</string>
+    <string name="about_content">O day la thong tin ve phan mem</string>
+    <string name="title_activity_about">Về chúng tôi</string>
+    <string name="mqtt_server">Server</string>
+    <string name="mqtt_port">Port</string>
+    <string name="mqtt_enable">Enable MQTT</string>
+    <string name="mqtt_username">Username</string>
+    <string name="mqtt_password">Password</string>
+    <string name="title_mqtt">MQTT</string>
+</resources>
